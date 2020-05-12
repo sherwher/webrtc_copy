@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>봄다방</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            position: inherit;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #12C47F;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <h1 class="logo"><a href="" class="logo-link"><img src="https://bomdabang-demo.azurewebsites.net/images/logo.png" alt="봄다방" class="logo-img"></a></h1>
+        <button class="back h-btn-L"><span>뒤로가기</span></button>
+        <button class="setup h-btn-R"><span>설정</span></button>
+    </header>
+
+    <!-- 채팅대상 찾기 컨텐츠 -->
+    <section id="chat_search">
+        <div class="spinner-wrap">
+            <div class="spinner">
+                <p class="spinner-txt">친구를<br>찾고 있습니다.</p>
+            </div>
+        </div>
+        <div class="campaign-wrap swiper-container">
+            <div class="swiper-wrapper">
+                <div class="campaign-list swiper-slide txt02">
+                    <p id="userCnt">0 친구와의 대화 시<br>꼭 예의를 지켜주세요</p>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="explore-stop"><button class="explore-stop-btn"></button></div>
+        <div class="btm-wrap ad-box" style="background-image: url(/images/00_temp/sample01.jpg);"></div>
+    </section>
+
+    <!-- 채팅대상 추천 컨텐츠 -->
+    <section class="h100" id="chat_recommand" style="display:none;">
+        <div class="outer-RL full-view-wrap">
+            <div class="chatting-info">
+                <p class="location fL txt01 displayN"><span id="region1">경기/성남</span></p>
+                <p class="name crown tit02"><b id="targetName1"></b><em class="crown-ic"><img
+                            src="../images/ic_crown.png" alt="왕관"></em></p>
+                <span class="want-to">님이 채팅을 원하고 있습니다.</span>
+                <p class="time fR txt01 displayN">02:14</p>
+            </div>
+            <div class="video-chatting-wrap" id="targetImg"
+                style="background-image: url(../images/00_temp/sample04.jpg);"></div>
+            <div class="chatting-control btm-wrap">
+                <div class="btn-box col2">
+                    <button class="btn talk" id="chat_start"><span class="txt">이야기 하기</span></button>
+                    <button class="btn connect" id="chat_other"><span class="txt">다른 친구 연결</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 화상채팅 컨텐츠 -->
+    <section class="h100" id="chat_video" style="display:none;">
+        <div class="outer-RL full-view-wrap">
+            <div class="chatting-info">
+                <p class="location fL txt01"><span id="region2">서울/마포</span></p>
+                <p class="name center tit02" id="targetName2">이경철</p>
+                <p class="time fR txt01">02:14</p>
+            </div>
+
+
+            <div class="video-chatting-wrap">
+                <video id="localVideo"   autoplay muted playsinline></video>
+                <video id="remoteVideo"  autoplay playsinline style="display:none;"></video>
+            </div>
+
+
+            <div class="chatting-control btm-wrap">
+                <div class="btn-box col2-add">
+                    <button class="btn register"><span class="txt">친구등록</span></button>
+                    <div class="hang-up-box"><button class="hang-up" id="hangup"></button></div>
+                    <button class="btn report"><span class="txt">신고하기</span></button>
+                </div>
+            </div>
+        </div>
+
+    
+    </section>
+
+    <!-- HTML퍼블리싱 참조 스크립트 라이브러리  -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/swiper.min.js"></script>
+
+
+    <!-- WebRTC관련 참조 스크립트 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="/js/rtc-signal-client.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

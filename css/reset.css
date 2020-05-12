@@ -1,0 +1,211 @@
+/* -------------- Common Style -------------- */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------- Set html5 elements to block -------------- */
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section, summary{
+    display: block
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body{
+    position: relative;
+    word-break: break-all;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/*
+html,body {
+    height: 100%;
+}
+*/
+caption,legend{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+caption{
+    display: none;
+}
+img {
+    border: none;
+    vertical-align: top
+}
+input, textarea, button, select, optgroup{
+    margin: 0;
+    vertical-align: middle;
+    font: inherit;
+    color: inherit
+}
+input, textarea, button, select{
+    box-sizing: border-box
+}
+ol,ul,ul li{
+    list-style: none
+}
+i, em, address{
+    font-style: normal;
+    display: inline;
+}
+button{
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    outline: none;
+    overflow: visible;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button::-moz-focus-inner{
+    padding: 0;
+    border: 0
+}
+abbr[title], dfn[title]{
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0
+}
+audio, canvas, progress,video {
+    display: inline-block
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+blockquote,q {
+    quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+}
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+mark {
+    background: #ff0;
+    color: #000
+}
+del {
+    text-decoration: line-through
+}
+/* 위첨자 / 아래첨자*/
+sub,sup{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+sup {
+    top: -0.5em
+}
+sub {
+    bottom: -0.25em
+}
+/* 단락 구분 라인 */
+hr{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* -------------- 하이퍼링크 -------------- */
+a {
+    color: inherit
+}
+a, a:link, a:visited, a:active, a:hover{
+    text-decoration: none;
+}
+a:focus{}
+a:hover{text-decoration:none;}
+.is-hidden{display:none !important;}
+.visible-hidden{
+    visibility: hidden !important;
+}
+.clear{
+    clear: both;
+}
+.txt-center{
+    text-align: center !important;
+}
+.inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* -------------- Forms -------------- */
+fieldset{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+/*input:focus,button:focus,textarea:focus{}*/
+label{
+    vertical-align: middle
+}
+select, input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type="reset"], input[type="button"], input[type="file"], input[type="reset"], button, textarea{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance: none
+    appearance:none;
+    border-radius:0;
+    border: 0;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance: none
+    appearance:none;
+}
+button, select, input[type="radio"], input[type='submit']input[type="search"], input[type="button"]{
+    overflow: visible;
+    cursor: pointer
+}
+input[type="checkbox"], input[type="radio"]{
+    box-sizing:border-box;
+    padding:0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+    height: auto;
+}
+textarea{
+    resize: none;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none
+    appearance: none;
+}
+select::-ms-expand{
+    display: none
+}
